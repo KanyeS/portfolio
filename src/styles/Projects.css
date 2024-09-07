@@ -1,0 +1,19 @@
+.Projects {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .Project-card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+  }
+  
+  h2 {
+    color: #333;
+  }
+  

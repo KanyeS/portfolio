@@ -1,0 +1,81 @@
+/* General Layout */
+.Home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f9f9f9;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .home-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Headings and Paragraphs */
+  h1 {
+    font-size: 3rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 40px;
+    line-height: 1.5;
+  }
+  
+  /* Carousel Wrapper for Animation */
+  .carousel-wrapper {
+    margin-top: 20px;
+  }
+  
+  /* Animations */
+  
+  /* Fade-in animation for the heading */
+  .fade-in {
+    opacity: 0;
+    animation: fade-in 1.2s ease-in-out forwards;
+  }
+  
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Slide-in animation for the paragraph */
+  .slide-in {
+    opacity: 0;
+    animation: slide-in 1.4s ease forwards;
+  }
+  
+  @keyframes slide-in {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* Fade-in for the carousel with a slight delay */
+  .fade-in-later {
+    opacity: 0;
+    animation: fade-in 1.6s ease-in-out forwards;
+  }
+  
