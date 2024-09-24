@@ -1,70 +1,121 @@
-# Getting Started with Create React App
+# My Portfolio and Projects
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to my personal portfolio website and projects repository! This site showcases some of the projects I've worked on, highlighting my skills in web development, game development, and AI-powered applications.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [About the Site](#about-the-site)
+- [Projects](#projects)
+  - [Portfolio Site](#portfolio-site)
+  - [Lyrical Project](#lyrical-project)
+  - [Below the Couches](#below-the-couches)
+- [Technologies Used](#technologies-used)
+- [Installation and Setup](#installation-and-setup)
+- [Contact](#contact)
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## About the Site
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+This portfolio website is built using **React** and is designed to showcase my personal projects and skills. It includes interactive elements, responsive design, and smooth animations to ensure a user-friendly experience across all devices. You can view details about each of my projects and the skills I've used in their development.
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Projects
 
-### `npm run build`
+### Portfolio Site
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**Description**:  
+This portfolio site was created to display my work and skills in web development. It's built using **React**, **JavaScript**, and **CSS**, and features **responsive design** and **smooth animations**. The site includes sections for projects, skills, and contact information, with dynamic navigation powered by **React Router**.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+**Skills Used**:
+- React
+- JavaScript
+- CSS
+- Responsive Design
+- React Router
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**Link**: [View the Portfolio Site](#Portfolio-Site)
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Lyrical Project
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+**Description**:  
+The Lyrical Project is a full-stack web application that generates AI-powered piano roll music. The backend is built using **Node.js**, **SQL**, and **Flask**, while the frontend uses **React** and **Tone.js** for audio visualization and playback. The AI component generates musical compositions based on user input, creating unique and creative outputs.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+**Skills Used**:
+- Node.js
+- SQL
+- Flask
+- React
+- Tone.js
+- AI
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+**Link**: [View the Lyrical Project](#Lyrical-Project)
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Below the Couches
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+**Description**:  
+Below the Couches is a 2D puzzle game developed using **Unity** and **C#**. It features physics-based gameplay where players must solve creative puzzles by interacting with the environment. The game is designed to challenge players with its engaging mechanics and level design.
 
-### Code Splitting
+**Skills Used**:
+- Unity
+- C#
+- 2D Game Development
+- Problem Solving
+- Game Design
+- Physics Programming
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+**Link**: [View Below the Couches](#Below-the-Couches)
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Technologies Used
 
-### Making a Progressive Web App
+This portfolio and the projects showcased here were built using a variety of modern technologies:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- **Frontend**: React, JavaScript, HTML, CSS, Tone.js
+- **Backend**: Node.js, Flask, SQL
+- **Game Development**: Unity, C#, 2D Game Design
+- **AI & Machine Learning**: AI Models for music generation
+- **Tools**: Git, GitHub, VSCode, Webpack
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Installation and Setup
 
-### Deployment
+To run this project locally, follow these steps:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/your-username/your-portfolio.git
+    ```
 
-### `npm run build` fails to minify
+2. Navigate to the project directory:
+    ```bash
+    cd your-portfolio
+    ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+3. Install the dependencies:
+    ```bash
+    npm install
+    ```
+
+4. Start the development server:
+    ```bash
+    npm start
+    ```
+
+5. Open your browser and navigate to `http://localhost:3000` to view the site.
+
+---
+
+## Contact
+
+Feel free to reach out to me if you have any questions or want to collaborate!
+
+- **Email**: contact@kanesportfolio.com
+- **GitHub**: [KanyeS](https://github.com/KanyeS)
