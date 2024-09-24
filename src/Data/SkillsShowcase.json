@@ -1,0 +1,62 @@
+[
+  {
+    "name": "React",
+    "description": "This portfolio site is built using React, showcasing my skills in modern front-end development. It includes interactive components and features React Three elements for 3D animations, enhancing the user experience.",
+    "image": "/assets/PortfolioSite.PNG",
+    "link": "/projects#Portfolio-Site"
+  },
+  {
+    "name": "JavaScript",
+    "description": "JavaScript powers the interactive elements and client-side logic of this portfolio site. It ensures smooth navigation, handling user input, and creating responsive features across different devices.",
+    "image": "/assets/PortfolioSite.PNG",
+    "link": "/projects#Portfolio-Site"
+  },
+  {
+    "name": "CSS",
+    "description": "Styled the portfolio site with modern CSS, including animations, layouts, and responsive design to provide a consistent look across devices and screen sizes.",
+    "image": "/assets/PortfolioSite.PNG",
+    "link": "/projects#Portfolio-Site"
+  },
+  {
+    "name": "Node.js",
+    "description": "Built the backend of the Lyrical Project using Node.js to handle API requests, routing, and communication with the Flask service that generates AI-driven music.",
+    "image": "/assets/Lyrical_Project.gif",
+    "link": "/projects#Lyrical-Project"
+  },
+  {
+    "name": "SQL",
+    "description": "Used SQL to manage the database for storing user data and generated musical sequences in the Lyrical Project, ensuring efficient data retrieval and storage.",
+    "image": "/assets/Lyrical_Project.gif",
+    "link": "/projects#Lyrical-Project"
+  },
+  {
+    "name": "Flask",
+    "description": "Integrated Flask as part of the backend to process and generate AI-driven music sequences, which are then returned to the front-end for visualisation in the Lyrical Project.",
+    "image": "/assets/Lyrical_Project.gif",
+    "link": "/projects#Lyrical-Project"
+  },
+  {
+    "name": "AI",
+    "description": "Developed AI models to generate unique piano roll compositions based on user input, showcasing the power of machine learning in the Lyrical Project.",
+    "image": "/assets/Lyrical_Project.gif",
+    "link": "/projects#Lyrical-Project"
+  },
+  {
+    "name": "C#",
+    "description": "Developed the game logic for Below the Couches using C#, handling object interactions, physics, and game mechanics within the Unity environment.",
+    "image": "/assets/CSharpGame.PNG",
+    "link": "/projects#Below-the-Couches"
+  },
+  {
+    "name": "Unity",
+    "description": "Used Unity to build the game Below the Couches, managing 2D game objects and implementing physics-based mechanics to create an engaging puzzle experience.",
+    "image": "/assets/CSharpGame.PNG",
+    "link": "/projects#Below-the-Couches"
+  },
+  {
+    "name": "2D Game Development",
+    "description": "Applied principles of 2D game development to design levels and puzzles in Below the Couches, ensuring a balance between difficulty and player engagement.",
+    "image": "/assets/CSharpGame.PNG",
+    "link": "/projects#Below-the-Couches"
+  }
+]

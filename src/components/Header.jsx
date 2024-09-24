@@ -1,6 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import '../styles/Header.css';
+import React from "react";
+import { Link } from "react-router-dom";
+import "../styles/Header.css";
 
 function Header() {
   return (
@@ -22,7 +22,9 @@ function Header() {
         </ul>
       </nav>
       <div className="cta">
-        <a href="/resume.pdf" download className="btn">Download Resume</a>
+        <a href="/Kane_Jeffery_Resume.pdf" download className="btn">
+          Download Resume
+        </a>
       </div>
     </header>
   );

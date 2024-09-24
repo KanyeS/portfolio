@@ -2,14 +2,14 @@
 .App {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; 
+  min-height: 100vh;
   text-align: center;
   font-family: Arial, sans-serif;
 }
 
 /* Main content area, grows to fill available space */
 .MainContent {
-  flex-grow: 1; 
+  flex-grow: 1;
 }
 
 /* Navigation styling */
@@ -33,30 +33,11 @@ nav ul li a:hover {
 }
 
 /* Headers */
-h1, h2 {
-  color: #333;
+h1,
+h2 {
+  color: #ffffff;
 }
 
-/* Project card styling */
-.Project-card {
-  border: 1px solid #ddd;
-  padding: 20px;
-  margin: 10px;
-  border-radius: 8px;
-}
-
-/* Contact section margin */
-.Contact {
-  margin-top: 20px;
-}
-
-/* Footer styling */
-.footer {
-  background-color: #282c34;
-  text-align: center;
+p {
   color: white;
-  width: 100%;
-  padding: 20px;
-  overflow-x: hidden;
-  flex-shrink: 0; 
 }

@@ -1,0 +1,21 @@
+[
+  {
+    "id": 1,
+    "title": "Portfolio Site",
+    "description": "A personal portfolio website showcasing my projects, skills, and resume. Built using React and styled with CSS, it features a responsive design and smooth animations.",
+    "skills": [
+      "React",
+      "JavaScript",
+      "CSS",
+      "Responsive Design",
+      "React Router"
+    ],
+    "image": "/assets/PortfolioSite.PNG",
+    "links": [
+      {
+        "label": "View on GitHub",
+        "url": "https://github.com/KanyeS/portfolio-site"
+      }
+    ]
+  }
+]
