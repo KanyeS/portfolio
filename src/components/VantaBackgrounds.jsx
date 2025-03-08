@@ -1,83 +1,94 @@
 import React, { useEffect, useRef, useCallback } from "react";
 import PropTypes from "prop-types";
-import * as THREE from "three";
 
 function VantaBackground({ projectsWrapperRef, effectType }) {
   const vantaRef = useRef(null);
   const vantaEffectRef = useRef(null);
 
-  // Memoize initVantaEffect with useCallback
+  // 🛠️ Function to dynamically load THREE.js and Vanta.js
   const initVantaEffect = useCallback(async () => {
     if (vantaRef.current) {
       if (vantaEffectRef.current) {
         vantaEffectRef.current.destroy();
       }
 
-      let effectModule;
-      if (effectType === "birds") {
-        effectModule = await import("vanta/dist/vanta.birds.min");
-      } else if (effectType === "globe") {
-        effectModule = await import("vanta/dist/vanta.globe.min");
-      } else if (effectType === "net") {
-        effectModule = await import("vanta/dist/vanta.net.min");
-      }
+      try {
+        // 🔹 Dynamically import three@0.124.0 and make it extensible
+        if (!window.THREE) {
+          const threeModule = await import(
+            "https://cdn.jsdelivr.net/npm/three@0.124.0/build/three.module.min.js"
+          );
+          window.THREE = Object.assign({}, threeModule);
+        }
 
-      if (effectModule) {
-        const effectInstance = effectModule.default({
-          THREE,
-          el: vantaRef.current,
-          mouseControls: true,
-          touchControls: true,
-          gyroControls: false,
-          ...(effectType === "birds"
-            ? {
-                backgroundColor: 0x0,
-                color1: 0x1a73e8,
-                color2: 0x61dafb,
-                birdSize: 1.5,
-                speedLimit: 4.0,
-                separation: 60.0,
-              }
-            : effectType === "globe"
+        let effectModule;
+        if (effectType === "birds") {
+          effectModule = await import("vanta/dist/vanta.birds.min");
+        } else if (effectType === "globe") {
+          effectModule = await import("vanta/dist/vanta.globe.min");
+        } else if (effectType === "net") {
+          effectModule = await import("vanta/dist/vanta.net.min");
+        }
+
+        if (effectModule) {
+          vantaEffectRef.current = effectModule.default({
+            THREE: window.THREE, // ✅ Explicitly set THREE version
+            el: vantaRef.current,
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            ...(effectType === "birds"
+              ? {
+                  backgroundColor: 0x000000,
+                  color1: 0x61dafb,
+                  color2: 0xd1ff,
+                  birdSize: 1.5,
+                  wingSpan: 20.0,
+                  speedLimit: 4.0,
+                  separation: 60.0,
+                }
+              : effectType === "globe"
               ? {
                   color: 0x61dafb,
-                  backgroundColor: 0x0,
+                  backgroundColor: 0x000000,
                   size: 1.2,
                   scale: 1,
                   scaleMobile: 1,
                 }
               : {
                   color: 0x61dafb,
-                  backgroundColor: 0x0,
+                  backgroundColor: 0x000000,
                   points: 10.0,
                   maxDistance: 20.0,
                   spacing: 15.0,
                 }),
-        });
+          });
 
-        vantaEffectRef.current = effectInstance;
+          // Ensure proper visibility & resizing
+          vantaRef.current.style.visibility = "visible";
+          vantaRef.current.style.opacity = "1";
+          vantaRef.current.style.zIndex = "1";
 
-        // Set visibility and styles
-        vantaRef.current.style.visibility = "visible";
-        vantaRef.current.style.opacity = "1";
-        vantaRef.current.style.zIndex = "1";
-
-        // Ensure the effect resizes properly
-        effectInstance.resize();
+          vantaEffectRef.current.resize();
+        }
+      } catch (error) {
+        console.error("[VANTA] Initialization Error:", error);
       }
     }
   }, [effectType]);
 
-  // Initialize Vanta effect
+  // 🎯 Initialize Vanta Effect
   useEffect(() => {
     initVantaEffect();
-
     return () => {
-      if (vantaEffectRef.current) vantaEffectRef.current.destroy();
+      if (vantaEffectRef.current) {
+        vantaEffectRef.current.destroy();
+        vantaEffectRef.current = null;
+      }
     };
   }, [initVantaEffect]);
 
-  // Use ResizeObserver to adjust Vanta effect on size changes
+  // 📏 Handle Resizing Dynamically
   useEffect(() => {
     if (projectsWrapperRef.current) {
       const resizeObserver = new ResizeObserver(() => {
@@ -87,10 +98,7 @@ function VantaBackground({ projectsWrapperRef, effectType }) {
       });
 
       resizeObserver.observe(projectsWrapperRef.current);
-
-      return () => {
-        resizeObserver.disconnect();
-      };
+      return () => resizeObserver.disconnect();
     }
   }, [projectsWrapperRef]);
 
