@@ -1,42 +1,82 @@
 import React, { useRef } from "react";
 import "../styles/Contact.css";
-import VantaBackground from "../components/VantaBackgrounds";
+import P5Background from "../components/P5Background";
 import contactInfo from "../components/config";
 
 function Contact() {
-  const ContentContentRef = useRef(null);
+  const contactContentRef = useRef(null);
 
   return (
-    <div ref={ContentContentRef} className="contact-container">
-      <VantaBackground
-        projectsWrapperRef={ContentContentRef}
-        effectType="birds"
-      />
+    <div ref={contactContentRef} className="contact-container">
+      <P5Background effectType="flow" />
       <div className="contact-content">
-        <h2>Contact Me</h2>
-        <p>
-          Email: <a href={`mailto:${contactInfo.email}`}>{contactInfo.email}</a>
-        </p>
-        <p>
-          Phone:{" "}
-          <a href={`tel:${contactInfo.phonenumber}`}>
-            {contactInfo.phonenumber}
-          </a>
-        </p>
-        <p>
-          <img
-            src="/assets/LI-In-Bug.png"
-            alt="LinkedIn"
-            className="social-logo"
-          />
-          <a
-            href="https://www.linkedin.com/in/kane-jeffery-35a55720b/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            LinkedIn
-          </a>
-        </p>
+        <div className="contact-header">
+          <h1>Let's Connect</h1>
+          <p>Ready to collaborate or have questions about my work? I'd love to hear from you!</p>
+        </div>
+        
+        <div className="contact-grid">
+          <div className="contact-info-section">
+            <h3>Get In Touch</h3>
+            <div className="contact-item">
+              <span className="contact-label">Email:</span>
+              <a href={`mailto:${contactInfo.email}`} className="contact-link">
+                {contactInfo.email}
+              </a>
+            </div>
+            <div className="contact-item">
+              <span className="contact-label">Phone:</span>
+              <a href={`tel:${contactInfo.phonenumber}`} className="contact-link">
+                {contactInfo.phonenumber}
+              </a>
+            </div>
+          </div>
+          
+          <div className="social-links-section">
+            <h3>Connect With Me</h3>
+            <div className="social-buttons">
+              <a
+                href={contactInfo.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-button"
+                aria-label="Visit my GitHub profile"
+              >
+                <img
+                  src="/assets/github-mark-white.png"
+                  alt="GitHub"
+                  className="social-logo"
+                />
+                GitHub
+              </a>
+              <a
+                href={contactInfo.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-button"
+                aria-label="Visit my LinkedIn profile"
+              >
+                <img
+                  src="/assets/LI-In-Bug.png"
+                  alt="LinkedIn"
+                  className="social-logo"
+                />
+                LinkedIn
+              </a>
+            </div>
+          </div>
+          
+          <div className="availability-section">
+            <h3>Availability</h3>
+            <p>Currently open to new opportunities and freelance projects.</p>
+            <p>Response time: Within 24 hours</p>
+            <div className="cta-section">
+              <a href="/Kane_Jeffery_Resume.pdf" download className="resume-btn">
+                Download Resume
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

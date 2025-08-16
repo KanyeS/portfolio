@@ -21,11 +21,6 @@ function Header() {
           </li>
         </ul>
       </nav>
-      <div className="cta">
-        <a href="/Kane_Jeffery_Resume.pdf" download className="btn">
-          Download Resume
-        </a>
-      </div>
     </header>
   );
 }

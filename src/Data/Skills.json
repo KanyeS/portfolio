@@ -1,114 +1,126 @@
-[
-  {
-    "name": "JavaScript",
-    "link": "/projects#Portfolio-Site"
-  },
-  {
-    "name": "React",
-    "link": "/projects#Portfolio-Site"
-  },
-  {
-    "name": "Node.js",
-    "link": "/projects#Lyrical-Project"
-  },
-  {
-    "name": "Python",
-    "link": "/projects#Lyrical-Project"
-  },
-  {
-    "name": "Object Oriented Programming",
-    "link": "/projects#Below-the-Couches"
-  },
-  {
-    "name": "HTML",
-    "link": "/projects#Portfolio-Site"
-  },
-  {
-    "name": "CSS",
-    "link": "/projects#Portfolio-Site"
-  },
-  {
-    "name": "SQL",
-    "link": "/projects#Lyrical-Project"
-  },
-  {
-    "name": "MongoDB",
-    "link": "/projects"
-  },
-  {
-    "name": "Docker",
-    "link": "/projects#Lyrical-Project"
-  },
-  {
-    "name": "AWS",
-    "link": "/projects#Lyrical-Project"
-  },
-  {
-    "name": "TypeScript",
-    "link": "/projects#Portfolio-Site"
-  },
-  {
-    "name": "REST API Development",
-    "link": "/projects#Lyrical-Project"
-  },
-  {
-    "name": "GraphQL",
-    "link": "/projects"
-  },
-  {
-    "name": "Linux",
-    "link": "/projects#Lyrical-Project"
-  },
-  {
-    "name": "Git",
-    "link": "/projects#Portfolio-Site"
-  },
-  {
-    "name": "Jenkins",
-    "link": "/projects"
-  },
-  {
-    "name": "Agile Methodologies",
-    "link": "/projects"
-  },
-  {
-    "name": "Machine Learning",
-    "link": "/projects#Lyrical-Project"
-  },
-  {
-    "name": "Data Analysis",
-    "link": "/projects#Lyrical-Project"
-  },
-  {
-    "name": "Unity",
-    "link": "/projects#Below-the-Couches"
-  },
-  {
-    "name": "C#",
-    "link": "/projects#Below-the-Couches"
-  },
-  {
-    "name": "C++",
-    "link": "/projects"
-  },
-  {
-    "name": "Java",
-    "link": "/projects"
-  },
-  {
-    "name": "Express.js",
-    "link": "/projects"
-  },
-  {
-    "name": "PostgreSQL",
-    "link": "/projects"
-  },
-  {
-    "name": "WebSockets",
-    "link": "/projects#Lyrical-Project"
-  },
-  {
-    "name": "Flask",
-    "link": "/projects#Lyrical-Project"
-  }
-]
+{
+  "Frontend Development": [
+    {
+      "name": "JavaScript",
+      "link": "/projects#Portfolio-Site"
+    },
+    {
+      "name": "React",
+      "link": "/projects#Portfolio-Site"
+    },
+    {
+      "name": "TypeScript",
+      "link": "/projects#Portfolio-Site"
+    },
+    {
+      "name": "HTML",
+      "link": "/projects#Portfolio-Site"
+    },
+    {
+      "name": "CSS",
+      "link": "/projects#Portfolio-Site"
+    }
+  ],
+  "Backend Development": [
+    {
+      "name": "Node.js",
+      "link": "/projects#Lyrical-Project"
+    },
+    {
+      "name": "Python",
+      "link": "/projects#Lyrical-Project"
+    },
+    {
+      "name": "Express.js",
+      "link": "/projects"
+    },
+    {
+      "name": "Flask",
+      "link": "/projects#Lyrical-Project"
+    },
+    {
+      "name": "REST API Development",
+      "link": "/projects#Lyrical-Project"
+    },
+    {
+      "name": "GraphQL",
+      "link": "/projects"
+    },
+    {
+      "name": "WebSockets",
+      "link": "/projects#Lyrical-Project"
+    }
+  ],
+  "Database & Cloud": [
+    {
+      "name": "SQL",
+      "link": "/projects#Lyrical-Project"
+    },
+    {
+      "name": "MongoDB",
+      "link": "/projects"
+    },
+    {
+      "name": "PostgreSQL",
+      "link": "/projects"
+    },
+    {
+      "name": "AWS",
+      "link": "/projects#Lyrical-Project"
+    },
+    {
+      "name": "Docker",
+      "link": "/projects#Lyrical-Project"
+    }
+  ],
+  "Programming Languages": [
+    {
+      "name": "C#",
+      "link": "/projects#Below-the-Couches"
+    },
+    {
+      "name": "C++",
+      "link": "/projects"
+    },
+    {
+      "name": "Java",
+      "link": "/projects"
+    },
+    {
+      "name": "Object Oriented Programming",
+      "link": "/projects#Below-the-Couches"
+    }
+  ],
+  "Tools & Technologies": [
+    {
+      "name": "Git",
+      "link": "/projects#Portfolio-Site"
+    },
+    {
+      "name": "Linux",
+      "link": "/projects#Lyrical-Project"
+    },
+    {
+      "name": "Jenkins",
+      "link": "/projects"
+    },
+    {
+      "name": "Unity",
+      "link": "/projects#Below-the-Couches"
+    },
+    {
+      "name": "Agile Methodologies",
+      "link": "/projects"
+    }
+  ],
+  "Data Science & ML": [
+    {
+      "name": "Machine Learning",
+      "link": "/projects#Lyrical-Project"
+    },
+    {
+      "name": "Data Analysis",
+      "link": "/projects#Lyrical-Project"
+    }
+  ]
+}

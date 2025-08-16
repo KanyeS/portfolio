@@ -7,24 +7,22 @@ function Footer() {
     <footer className="footer">
       <div className="footer-content">
         <div className="contact-info">
+          <h3>Get In Touch</h3>
           <p>
-            Contact me:{" "}
-            <p>
-              {" "}
-              Email:{" "}
-              <a href={`mailto:${contactInfo.email}`}>{contactInfo.email}</a>
-            </p>
-            Phone:{" "}
-            <a href={`tel:${contactInfo.phonenumber}`}>
-              {contactInfo.phonenumber}
-            </a>
+            Email: <a href={`mailto:${contactInfo.email}`}>{contactInfo.email}</a>
+          </p>
+          <p>
+            Phone: <a href={`tel:${contactInfo.phonenumber}`}>{contactInfo.phonenumber}</a>
           </p>
         </div>
+        
         <div className="social-links">
+          <h3>Connect With Me</h3>
           <a
             href={contactInfo.github}
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Visit my GitHub profile"
           >
             <img
               src="/assets/github-mark-white.png"
@@ -37,6 +35,7 @@ function Footer() {
             href={contactInfo.linkedin}
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Visit my LinkedIn profile"
           >
             <img
               src="/assets/LI-In-Bug.png"
@@ -46,11 +45,13 @@ function Footer() {
             LinkedIn
           </a>
         </div>
+        
         <div className="copyright">
+          <h3>Portfolio</h3>
           <p>
-            &copy; {new Date().getFullYear()} Kane's Portfolio. All rights
-            reserved.
+            &copy; {new Date().getFullYear()} Kane's Portfolio
           </p>
+          <p>All rights reserved.</p>
         </div>
       </div>
     </footer>

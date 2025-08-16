@@ -13,66 +13,175 @@ body {
 body {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Full viewport height */
-  overflow-x: hidden; /* Prevent horizontal scrolling */
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
 .main-content {
-  flex: 1; /* Allows the content to grow and push the footer down */
+  flex: 1;
 }
 
-/* Footer container */
+/* Professional Footer Container */
 .footer {
-  background-color: #000000;
-  text-align: center;
-  color: white;
+  background: linear-gradient(135deg, #111111 0%, #1a1a1a 100%);
+  color: #FFFFFF;
   width: 100%;
-  overflow-x: hidden;
   flex-shrink: 0;
   margin-top: auto;
+  border-top: 3px solid #E63946;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* Footer content styling */
+/* Footer Content Layout */
 .footer-content {
+  max-width: 1200px;
   margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  max-width: 1000px;
-  width: 100%;
+  padding: 40px 20px 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+  align-items: start;
 }
 
-/* Contact Info styling */
+/* Contact Information Section */
+.contact-info {
+  text-align: left;
+}
+
+.contact-info h3 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  color: #E63946;
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.contact-info p {
+  font-family: 'Hind', sans-serif;
+  margin: 8px 0;
+  line-height: 1.6;
+  color: #FFFFFF;
+}
+
 .contact-info a {
-  color: #61dafb;
+  color: #FFFFFF;
   text-decoration: none;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+  font-weight: 500;
 }
 
 .contact-info a:hover {
-  text-decoration: underline;
+  color: #E63946;
+  text-shadow: 0 0 8px rgba(230, 57, 70, 0.4);
+}
+
+/* Social Links Section */
+.social-links {
+  text-align: center;
+}
+
+.social-links h3 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  color: #E63946;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .social-links a {
-  color: #61dafb;
-  margin: 0 5px;
+  display: inline-flex;
+  align-items: center;
+  margin: 10px 15px;
+  padding: 12px 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid transparent;
+  border-radius: 50px;
+  color: #FFFFFF;
   text-decoration: none;
-  font-weight: bold;
+  font-family: 'Hind', sans-serif;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
 }
 
 .social-links a:hover {
-  text-decoration: underline;
-}
-
-/* Copyright styling */
-.copyright {
-  font-size: 0.9em;
-  color: #aaaaaa;
-  margin-top: 10px;
+  background-color: #E63946;
+  border-color: #E63946;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(230, 57, 70, 0.3);
 }
 
 .social-logo {
-  width: 20px; /* Adjust logo size */
-  height: 20px; /* Adjust logo size */
-  margin-right: 8px; /* Space between logo and text */
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  filter: brightness(0) invert(1);
+  transition: filter 0.3s ease;
+}
+
+.social-links a:hover .social-logo {
+  filter: brightness(0) invert(1);
+}
+
+/* Copyright Section */
+.copyright {
+  text-align: right;
+}
+
+.copyright h3 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  color: #E63946;
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.copyright p {
+  font-family: 'Hind', sans-serif;
+  font-size: 0.9rem;
+  color: #A8A8A8;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    text-align: center;
+    padding: 30px 20px 25px;
+  }
+  
+  .contact-info,
+  .copyright {
+    text-align: center;
+  }
+  
+  .social-links a {
+    margin: 8px 10px;
+    padding: 10px 16px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-content {
+    padding: 25px 15px 20px;
+  }
+  
+  .social-links a {
+    display: block;
+    margin: 8px 0;
+    width: 100%;
+    max-width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
