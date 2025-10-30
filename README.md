@@ -2,6 +2,10 @@
 
 Welcome to my personal portfolio website and projects repository! This site showcases some of the projects I've worked on, highlighting my skills in web development, game development, and other applications.
 
+You can see it live here!
+
+https://kanesportfolio.com/
+
 ## Table of Contents
 
 - [About the Site](#about-the-site)

@@ -6,9 +6,12 @@ export default defineConfig(({ mode }) => {
 
     return {
         plugins: plugins(mode),
+        build: {
+            outDir: 'build'  
+        },
         server: {
-            port: 3000, // To run the app on port 3000
-            open: true // If we want to open the app once its started
+            port: 3000, 
+            open: true
         },
     };
 });
