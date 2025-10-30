@@ -11,13 +11,10 @@ function Footer() {
           <p>
             Email: <a href={`mailto:${contactInfo.email}`}>{contactInfo.email}</a>
           </p>
-          <p>
-            Phone: <a href={`tel:${contactInfo.phonenumber}`}>{contactInfo.phonenumber}</a>
-          </p>
         </div>
         
         <div className="social-links">
-          <h3>Connect With Me</h3>
+          <h3>Contacts</h3>
           <a
             href={contactInfo.github}
             target="_blank"

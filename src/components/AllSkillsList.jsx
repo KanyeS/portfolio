@@ -38,7 +38,7 @@ function AllSkillsList() {
     <div className="all-skills-container">
       <h2>All My Skills</h2>
       <p>
-        Browse through all my skills organized by category. You can search for specific skills below:
+        Browse through all my skills organised by category. You can search for specific skills below:
       </p>
 
       <input

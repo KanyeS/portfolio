@@ -24,7 +24,7 @@ const Secrets = () => {
         updateTimer();
     
         return () => clearInterval(timerInterval);
-    }, []); // ✅ No dependencies needed since startDate is inside useEffect
+    }, []);
     
 
     return (

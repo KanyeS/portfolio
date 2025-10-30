@@ -1,10 +1,6 @@
 {
   "Frontend Development": [
-    {
-      "name": "JavaScript",
-      "link": "/projects#Portfolio-Site"
-    },
-    {
+{
       "name": "React",
       "link": "/projects#Portfolio-Site"
     },
@@ -18,6 +14,10 @@
     },
     {
       "name": "CSS",
+      "link": "/projects#Portfolio-Site"
+    },
+    {
+      "name": "Vite",
       "link": "/projects#Portfolio-Site"
     }
   ],
@@ -49,13 +49,17 @@
     {
       "name": "WebSockets",
       "link": "/projects#Lyrical-Project"
+    },
+     {
+      "name": "C#",
+      "link": "/projects#Below-the-Couches"
+    },
+    {
+      "name": "Web Networking",
+      "link": "/projects#Portfolio-Site"
     }
   ],
-  "Database & Cloud": [
-    {
-      "name": "SQL",
-      "link": "/projects#Lyrical-Project"
-    },
+  "Database": [
     {
       "name": "MongoDB",
       "link": "/projects"
@@ -65,30 +69,8 @@
       "link": "/projects"
     },
     {
-      "name": "AWS",
-      "link": "/projects#Lyrical-Project"
-    },
-    {
-      "name": "Docker",
-      "link": "/projects#Lyrical-Project"
-    }
-  ],
-  "Programming Languages": [
-    {
-      "name": "C#",
-      "link": "/projects#Below-the-Couches"
-    },
-    {
-      "name": "C++",
+      "name": "Transact-SQL",
       "link": "/projects"
-    },
-    {
-      "name": "Java",
-      "link": "/projects"
-    },
-    {
-      "name": "Object Oriented Programming",
-      "link": "/projects#Below-the-Couches"
     }
   ],
   "Tools & Technologies": [
@@ -101,25 +83,19 @@
       "link": "/projects#Lyrical-Project"
     },
     {
-      "name": "Jenkins",
-      "link": "/projects"
-    },
-    {
       "name": "Unity",
       "link": "/projects#Below-the-Couches"
     },
     {
-      "name": "Agile Methodologies",
-      "link": "/projects"
-    }
-  ],
-  "Data Science & ML": [
-    {
-      "name": "Machine Learning",
+      "name": "AWS",
       "link": "/projects#Lyrical-Project"
     },
     {
-      "name": "Data Analysis",
+      "name": "Docker",
+      "link": "/projects#Lyrical-Project"
+    },
+    {
+      "name": "Figma",
       "link": "/projects#Lyrical-Project"
     }
   ]
