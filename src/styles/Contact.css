@@ -7,22 +7,24 @@
   position: relative;
   padding: 100px 20px 20px;
   overflow: hidden;
-  background-color: #FFFFFF;
+  background-color: var(--bg-primary);
+  transition: background-color 0.3s ease;
 }
 
 /* Contact Content Card */
 .contact-content {
   max-width: 1200px;
   width: 100%;
-  background: rgba(17, 17, 17, 0.95);
-  border: 3px solid #E63946;
+  background: var(--bg-secondary);
+  border: 3px solid var(--accent-primary);
   border-radius: 20px;
   padding: 50px 40px;
   backdrop-filter: blur(15px);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 20px 60px var(--shadow-color);
   position: relative;
   z-index: 2;
-  color: #FFFFFF;
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
 }
 
 /* Header Section */
@@ -35,19 +37,21 @@
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
   font-size: 3rem;
-  color: #E63946;
+  color: var(--accent-primary);
   margin-bottom: 20px;
   text-transform: uppercase;
   letter-spacing: 2px;
+  transition: color 0.3s ease;
 }
 
 .contact-header p {
   font-family: 'Hind', sans-serif;
   font-size: 1.3rem;
-  color: #A8A8A8;
+  color: var(--text-primary);
   max-width: 600px;
   margin: 0 auto;
   line-height: 1.6;
+  transition: color 0.3s ease;
 }
 
 /* Grid Layout */
@@ -61,16 +65,17 @@
 /* Section Headers */
 .contact-info-section h3,
 .social-links-section h3,
-.availability-section h3 {
+.resume-section h3 {
   font-family: 'Raleway', sans-serif;
   font-weight: 600;
-  color: #E63946;
+  color: var(--accent-primary);
   font-size: 1.4rem;
   margin-bottom: 25px;
   text-transform: uppercase;
   letter-spacing: 1px;
-  border-bottom: 2px solid #E63946;
+  border-bottom: 2px solid var(--accent-primary);
   padding-bottom: 10px;
+  transition: color 0.3s ease, border-color 0.3s ease;
 }
 
 /* Contact Info Section */
@@ -88,15 +93,16 @@
 .contact-label {
   font-family: 'Raleway', sans-serif;
   font-weight: 600;
-  color: #A8A8A8;
+  color: var(--text-primary);
   font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 1px;
+  transition: color 0.3s ease;
 }
 
 .contact-link {
   font-family: 'Hind', sans-serif;
-  color: #FFFFFF;
+  color: var(--text-primary);
   text-decoration: none;
   font-size: 1.1rem;
   font-weight: 500;
@@ -105,8 +111,8 @@
 }
 
 .contact-link:hover {
-  color: #E63946;
-  text-shadow: 0 0 8px rgba(230, 57, 70, 0.4);
+  color: var(--accent-primary);
+  text-shadow: 0 0 8px var(--shadow-color);
 }
 
 /* Social Links Section */
@@ -122,28 +128,26 @@
 }
 
 .social-button {
-  display: inline-flex;
   align-items: center;
-  padding: 15px 25px;
-  background-color: rgba(255, 255, 255, 0.1);
-  border: 2px solid transparent;
-  border-radius: 50px;
+  justify-content: center;
+  display: inline-flex;
+  padding: 12px 25px;
+  background-color: var(--accent-primary);
   color: #FFFFFF;
   text-decoration: none;
+  border-radius: 50px;
   font-family: 'Hind', sans-serif;
   font-weight: 600;
   font-size: 1.1rem;
   transition: all 0.3s ease;
-  backdrop-filter: blur(10px);
-  min-width: 180px;
-  justify-content: center;
+  border: 2px solid var(--accent-primary);
 }
 
 .social-button:hover {
-  background-color: #E63946;
-  border-color: #E63946;
-  transform: translateY(-3px);
-  box-shadow: 0 10px 30px rgba(230, 57, 70, 0.4);
+  background-color: var(--accent-secondary);
+  border-color: var(--accent-secondary);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 25px var(--shadow-color);
 }
 
 .social-logo {
@@ -158,17 +162,18 @@
   filter: brightness(0) invert(1);
 }
 
-/* Availability Section */
-.availability-section {
+/* resume Section */
+.resume-section {
   text-align: right;
 }
 
-.availability-section p {
+.resume-section p {
   font-family: 'Hind', sans-serif;
   font-size: 1rem;
-  color: #A8A8A8;
+  color: var(--text-secondary);
   margin-bottom: 15px;
   line-height: 1.6;
+  transition: color 0.3s ease;
 }
 
 .cta-section {
@@ -178,7 +183,7 @@
 .resume-btn {
   display: inline-block;
   padding: 12px 25px;
-  background-color: #E63946;
+  background-color: var(--accent-primary);
   color: #FFFFFF;
   text-decoration: none;
   border-radius: 50px;
@@ -186,14 +191,14 @@
   font-weight: 600;
   font-size: 1.1rem;
   transition: all 0.3s ease;
-  border: 2px solid #E63946;
+  border: 2px solid var(--accent-primary);
 }
 
 .resume-btn:hover {
-  background-color: #457B9D;
-  border-color: #457B9D;
+  background-color: var(--accent-secondary);
+  border-color: var(--accent-secondary);
   transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 8px 25px rgba(69, 123, 157, 0.4);
+  box-shadow: 0 8px 25px var(--shadow-color);
 }
 
 /* Responsive Design */
@@ -212,7 +217,7 @@
   }
   
   .contact-info-section,
-  .availability-section {
+  .resume-section {
     text-align: center;
   }
   

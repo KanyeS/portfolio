@@ -1,15 +1,75 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import PropTypes from "prop-types";
 
 function P5Background({ effectType }) {
   const canvasRef = useRef(null);
   const p5InstanceRef = useRef(null);
   const isInitializedRef = useRef(false);
+  
+  // Initialize isDarkMode with the correct theme immediately
+  const getInitialTheme = () => {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      return savedTheme === 'dark';
+    }
+    const dataTheme = document.documentElement.getAttribute('data-theme');
+    if (dataTheme) {
+      return dataTheme === 'dark';
+    }
+    // Fall back to system preference
+    return window.matchMedia('(prefers-color-scheme: dark)').matches;
+  };
+  
+  const [isDarkMode, setIsDarkMode] = useState(getInitialTheme);
+
+  // Detect theme changes from CSS variables
+  useEffect(() => {
+    const detectTheme = () => {
+      // Check localStorage first, then fall back to data-theme attribute
+      const savedTheme = localStorage.getItem('theme');
+      const dataTheme = document.documentElement.getAttribute('data-theme');
+      
+      if (savedTheme) {
+        setIsDarkMode(savedTheme === 'dark');
+        // Ensure data-theme attribute is set if it's not already
+        if (!dataTheme) {
+          document.documentElement.setAttribute('data-theme', savedTheme);
+        }
+      } else if (dataTheme) {
+        setIsDarkMode(dataTheme === 'dark');
+      } else {
+        // Fall back to system preference
+        const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+        setIsDarkMode(mediaQuery.matches);
+      }
+    };
+
+    // Initial detection
+    detectTheme();
+
+    // Watch for theme changes
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        if (mutation.type === 'attributes' && mutation.attributeName === 'data-theme') {
+          detectTheme();
+        }
+      });
+    });
+
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ['data-theme']
+    });
+
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
-    // Prevent multiple initializations
-    if (isInitializedRef.current) {
-      return;
+    // Clean up existing instance when theme changes
+    if (p5InstanceRef.current) {
+      p5InstanceRef.current.remove();
+      p5InstanceRef.current = null;
+      isInitializedRef.current = false;
     }
     
     // Capture the ref value to use in cleanup
@@ -83,7 +143,7 @@ function P5Background({ effectType }) {
             canvas.style('z-index', '-1');
             canvas.style('width', '100%');
             canvas.style('height', '100%');
-            p.background(255); // White background (#FFFFFF)
+            p.background(isDarkMode ? 20 : 255); // Dark gray or white background
             
             // Create simple particle objects
             for (let i = 0; i < 150; i++) {
@@ -101,7 +161,7 @@ function P5Background({ effectType }) {
           };
 
           p.draw = () => {
-            p.background(255, 30); // White background with slight fade for trails
+            p.background(isDarkMode ? 20 : 255, 30); // Dynamic background with fade
             
             p.noStroke();
             
@@ -126,9 +186,13 @@ function P5Background({ effectType }) {
               if (particle.y > p.height) particle.y = 0;
               if (particle.y < 0) particle.y = p.height;
               
-              // Draw particle with bright red color (#E63946) - make more visible
-              p.fill(230, 57, 70, 200); // Increased opacity for better visibility
-              p.ellipse(particle.x, particle.y, particle.size * 2); // Doubled size for visibility
+              // Dynamic particle color based on dark mode
+              if (isDarkMode) {
+                p.fill(69, 123, 157, 200); // Blue for dark mode
+              } else {
+                p.fill(230, 57, 70, 200); // Red for light mode
+              }
+              p.ellipse(particle.x, particle.y, particle.size * 2);
             }
           };
 
@@ -170,10 +234,14 @@ function P5Background({ effectType }) {
           };
 
           p.draw = () => {
-            p.background(255); // white background
+            p.background(isDarkMode ? 20 : 255); // Dynamic background
 
             // Draw smooth flowing shapes
-            p.fill(0, 15); // black with low alpha for smooth blending
+            if (isDarkMode) {
+              p.fill(255, 15); // Light shapes on dark background
+            } else {
+              p.fill(0, 15); // Dark shapes on light background
+            }
             p.beginShape();
             let xoff = 0;
             for (let x = 0; x <= p.width; x += 10) {
@@ -235,7 +303,7 @@ function P5Background({ effectType }) {
           };
 
           p.draw = () => {
-            p.background('#FFFFFF'); // White background
+            p.background(isDarkMode ? 20 : 255); // Dynamic background
 
             for (let c of circles) {
               // subtle oscillating motion
@@ -248,12 +316,18 @@ function P5Background({ effectType }) {
               if (c.y > p.height) c.y = 0;
               if (c.y < 0) c.y = p.height;
 
-              // soft, translucent circle accents
-              p.fill(230, 57, 70, 50); // bright red with low opacity
-              p.ellipse(c.x, c.y, c.size);
-
-              p.fill(168, 168, 168, 30); // cool gray subtle accent
-              p.ellipse(c.x, c.y, c.size * 0.7);
+              // Dynamic circle colors based on dark mode
+              if (isDarkMode) {
+                p.fill(69, 123, 157, 50); // Blue accent for dark mode
+                p.ellipse(c.x, c.y, c.size);
+                p.fill(200, 200, 200, 30); // Light gray accent
+                p.ellipse(c.x, c.y, c.size * 0.7);
+              } else {
+                p.fill(230, 57, 70, 50); // Red accent for light mode
+                p.ellipse(c.x, c.y, c.size);
+                p.fill(168, 168, 168, 30); // Gray accent
+                p.ellipse(c.x, c.y, c.size * 0.7);
+              }
             }
           };
 
@@ -326,7 +400,7 @@ function P5Background({ effectType }) {
       const allCanvases = document.querySelectorAll('canvas.p5Canvas');
       allCanvases.forEach(canvas => canvas.remove());
     };
-  }, [effectType]);
+  }, [effectType, isDarkMode]);
 
   return (
     <div 
@@ -345,7 +419,7 @@ function P5Background({ effectType }) {
 }
 
 P5Background.propTypes = {
-  effectType: PropTypes.oneOf(['dust', 'particles', 'waves', 'geometric', 'flow', 'default']).isRequired,
+  effectType: PropTypes.oneOf(['dust', 'flow', 'circles', 'default']).isRequired,
 };
 
 export default P5Background;

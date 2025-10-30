@@ -1,13 +1,13 @@
 [
   {
     "name": "React, JavaScript, CSS",
-    "description": "This portfolio site is built using React, JavaScript, and CSS, showcasing my skills in modern front-end development, interactive components, and responsive design. It features React Three elements for 3D animations and smooth navigation.",
+    "description": "This portfolio site is built using React, JavaScript, and CSS, showcasing my skills in modern front-end development, interactive components, and responsive design. It features p5.js for animations and smooth navigation.",
     "image": "/assets/PortfolioSite.PNG",
     "link": "/projects#Portfolio-Site"
   },
   {
     "name": "Node.js, SQL, Flask, AI",
-    "description": "The Lyrical Project backend uses Node.js, SQL, Flask, and AI to handle API requests, manage databases, generate music sequences, and apply machine learning for unique piano roll compositions.",
+    "description": "The Lyrical Project backend uses Node.js, SQL, Flask, and locally hosted AI to handle API requests, manage databases, generate music sequences, and apply machine learning for unique piano roll compositions.",
     "image": "/assets/Lyrical_Project.gif",
     "link": "/projects#Lyrical-Project"
   },

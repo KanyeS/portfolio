@@ -11,8 +11,8 @@ function Contact() {
       <P5Background effectType="flow" />
       <div className="contact-content">
         <div className="contact-header">
-          <h1>Let's Connect</h1>
-          <p>Ready to collaborate or have questions about my work? I'd love to hear from you!</p>
+          <h1>Contacts</h1>
+          <p>Have a project in mind? Let's talk about it.</p>
         </div>
         
         <div className="contact-grid">
@@ -24,16 +24,10 @@ function Contact() {
                 {contactInfo.email}
               </a>
             </div>
-            <div className="contact-item">
-              <span className="contact-label">Phone:</span>
-              <a href={`tel:${contactInfo.phonenumber}`} className="contact-link">
-                {contactInfo.phonenumber}
-              </a>
-            </div>
           </div>
           
           <div className="social-links-section">
-            <h3>Connect With Me</h3>
+            <h3>Socials</h3>
             <div className="social-buttons">
               <a
                 href={contactInfo.github}
@@ -66,10 +60,8 @@ function Contact() {
             </div>
           </div>
           
-          <div className="availability-section">
-            <h3>Availability</h3>
-            <p>Currently open to new opportunities and freelance projects.</p>
-            <p>Response time: Within 24 hours</p>
+          <div className="resume-section">
+            <h3>Resume</h3>
             <div className="cta-section">
               <a href="/Kane_Jeffery_Resume.pdf" download className="resume-btn">
                 Download Resume

@@ -14,7 +14,7 @@ function Projects() {
 
   const projects = projectsData.map((project) => ({
     ...project,
-    image: `${process.env.PUBLIC_URL}${project.image}`,
+    image: project.image,
   }));
 
   useEffect(() => {
@@ -51,14 +51,28 @@ function Projects() {
   };
 
   const getProjectStats = () => {
+    if (!projects || !Array.isArray(projects)) return { totalProjects: 0, uniqueTechnologies: 0, totalLinks: 0 };
+
     const totalProjects = projects.length;
-    const uniqueTechnologies = new Set(projects.flatMap(p => p.skills)).size;
-    const totalLinks = projects.reduce((sum, p) => sum + p.links.length, 0);
+
+    const uniqueTechnologies = new Set(
+      projects.flatMap(p => p.skills || [])
+    ).size;
+
+    const totalLinks = projects.reduce((sum, project) => {
+      const githubLinks = (project.links || []).filter(linkObj =>
+        linkObj.url?.toLowerCase().includes("github.com")
+      ).length;
+      return sum + githubLinks;
+    }, 0);
+
     return { totalProjects, uniqueTechnologies, totalLinks };
   };
 
+
+
   const renderOverview = () => {
-    const stats = getProjectStats();
+    const stats = getProjectStats(projects);
     const topSkills = getTechStackSummary();
     
     return (
@@ -66,8 +80,8 @@ function Projects() {
         <div className="journey-header">
           <h1>My Development Journey</h1>
           <p>
-            From game development to full-stack web applications, explore the evolution 
-            of my technical skills and creative problem-solving approach.
+            From game development to full-stack web applications, explore the development 
+            of my technical skills.
           </p>
         </div>
 
@@ -87,7 +101,7 @@ function Projects() {
         </div>
 
         <div className="tech-journey">
-          <h2>Technology Stack Evolution</h2>
+          <h2>Skills & Technologies Used By Project</h2>
           <div className="tech-timeline">
             {topSkills.map(([skill, count], index) => (
               <div key={skill} className="tech-item">
