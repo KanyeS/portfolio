@@ -1,8 +1,12 @@
 {
   "Frontend Development": [
-{
+    {
       "name": "React",
-      "link": "/projects#Portfolio-Site"
+      "link": "/projects#RIGG"
+    },
+    {
+      "name": "Three.js",
+      "link": "/projects#RIGG"
     },
     {
       "name": "TypeScript",
@@ -19,9 +23,33 @@
     {
       "name": "Vite",
       "link": "/projects#Portfolio-Site"
+    },
+    {
+      "name": "ONNX Runtime Web",
+      "link": "/projects#AutoColouringPage"
+    },
+    {
+      "name": "Web Workers",
+      "link": "/projects#AutoColouringPage"
     }
   ],
   "Backend Development": [
+    {
+      "name": "ASP.NET Core",
+      "link": "/projects#RIGG"
+    },
+    {
+      "name": "Entity Framework Core",
+      "link": "/projects#RIGG"
+    },
+    {
+      "name": "SignalR",
+      "link": "/projects#RIGG"
+    },
+    {
+      "name": "C#",
+      "link": "/projects#RIGG"
+    },
     {
       "name": "Node.js",
       "link": "/projects#Lyrical-Project"
@@ -50,10 +78,6 @@
       "name": "WebSockets",
       "link": "/projects#Lyrical-Project"
     },
-     {
-      "name": "C#",
-      "link": "/projects#Below-the-Couches"
-    },
     {
       "name": "Web Networking",
       "link": "/projects#Portfolio-Site"
@@ -61,16 +85,78 @@
   ],
   "Database": [
     {
-      "name": "MongoDB",
-      "link": "/projects"
+      "name": "PostgreSQL",
+      "link": "/projects#RIGG"
     },
     {
-      "name": "PostgreSQL",
+      "name": "Redis",
+      "link": "/projects#RIGG"
+    },
+    {
+      "name": "MongoDB",
       "link": "/projects"
     },
     {
       "name": "Transact-SQL",
       "link": "/projects"
+    },
+    {
+      "name": "SQL Server",
+      "link": "/projects"
+    }
+  ],
+  "Cloud & Infrastructure": [
+    {
+      "name": "Cloudflare R2",
+      "link": "/projects#RIGG"
+    },
+    {
+      "name": "Cloudflare",
+      "link": "/projects#RIGG"
+    },
+    {
+      "name": ".NET Aspire",
+      "link": "/projects#RIGG"
+    },
+    {
+      "name": "Docker",
+      "link": "/projects#RIGG"
+    },
+    {
+      "name": "Docker Compose",
+      "link": "/projects#RIGG"
+    },
+    {
+      "name": "Linux",
+      "link": "/projects#RIGG"
+    },
+    {
+      "name": "VPS",
+      "link": "/projects#RIGG"
+    },
+    {
+      "name": "AWS",
+      "link": "/projects#Lyrical-Project"
+    },
+    {
+      "name": "CI/CD Pipelines",
+      "link": "/projects#RIGG"
+    },
+    {
+      "name": "GitHub Actions",
+      "link": "/projects#RIGG"
+    },
+    {
+      "name": "Netlify",
+      "link": "/projects#Portfolio-Site"
+    },
+    {
+      "name": "Clerk Auth",
+      "link": "/projects#RIGG"
+    },
+    {
+      "name": "Stripe",
+      "link": "/projects#RIGG"
     }
   ],
   "Tools & Technologies": [
@@ -79,20 +165,28 @@
       "link": "/projects#Portfolio-Site"
     },
     {
-      "name": "Linux",
-      "link": "/projects#Lyrical-Project"
+      "name": "Grafana",
+      "link": "/projects"
+    },
+    {
+      "name": "Postman",
+      "link": "/projects"
+    },
+    {
+      "name": "Selenium",
+      "link": "/projects"
+    },
+    {
+      "name": "Jira",
+      "link": "/projects"
+    },
+    {
+      "name": "PowerShell",
+      "link": "/projects"
     },
     {
       "name": "Unity",
       "link": "/projects#Below-the-Couches"
-    },
-    {
-      "name": "AWS",
-      "link": "/projects#Lyrical-Project"
-    },
-    {
-      "name": "Docker",
-      "link": "/projects#Lyrical-Project"
     },
     {
       "name": "Figma",

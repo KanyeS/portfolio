@@ -46,8 +46,7 @@ function Projects() {
       return acc;
     }, {});
     return Object.entries(skillCount)
-      .sort(([,a], [,b]) => b - a)
-      .slice(0, 10);
+      .sort(([,a], [,b]) => b - a);
   };
 
   const getProjectStats = () => {

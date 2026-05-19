@@ -1,5 +1,17 @@
 [
   {
+    "name": "React, Three.js, ASP.NET Core, PostgreSQL",
+    "description": "RIGG is a full-stack SaaS platform for browser-based 3D pose editing. Built with React and Three.js on the frontend and ASP.NET Core with PostgreSQL on the backend, it features real-time collaboration via SignalR, Stripe subscriptions, and cloud file storage on Cloudflare R2.",
+    "image": "/assets/RIGG.png",
+    "link": "/projects#RIGG"
+  },
+  {
+    "name": "React, ONNX Runtime Web, Web Workers",
+    "description": "AutoColouringPage runs a neural network entirely in the browser to convert photos into printable colouring page line art. Built with React and ONNX Runtime Web, it uses Web Workers and tile-based inference so heavy ML processing never blocks the UI.",
+    "image": "/assets/AutoColouringPage.png",
+    "link": "/projects#AutoColouringPage"
+  },
+  {
     "name": "React, JavaScript, CSS",
     "description": "This portfolio site is built using React, JavaScript, and CSS, showcasing my skills in modern front-end development, interactive components, and responsive design. It features p5.js for animations and smooth navigation.",
     "image": "/assets/PortfolioSite.PNG",

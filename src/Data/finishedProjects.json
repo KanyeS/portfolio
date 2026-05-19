@@ -1,6 +1,63 @@
 [
   {
     "id": 1,
+    "title": "RIGG",
+    "description": "A full-stack SaaS platform for browser-based 3D animation and pose editing. Users can load skeletal models, manipulate bone transforms in real-time, and collaborate on shared sessions — all gated behind a Stripe subscription.",
+    "skills": [
+      "React",
+      "Three.js",
+      "ASP.NET Core",
+      "Entity Framework Core",
+      "PostgreSQL",
+      "Redis",
+      "Stripe",
+      "Cloudflare R2",
+      "SignalR",
+      ".NET Aspire",
+      "Clerk Auth",
+      "Docker",
+      "Docker Compose",
+      "Linux",
+      "VPS",
+      "CI/CD Pipelines",
+      "GitHub Actions"
+    ],
+    "image": "/assets/RIGG.png",
+    "links": [
+      {
+        "label": "View on Live",
+        "url": "https://riggposestudio.com"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "AutoColouringPage",
+    "description": "A free, browser-based AI tool that converts photos and illustrations into printable colouring page line art. All processing runs client-side via an ONNX neural network — no images are ever uploaded to a server.",
+    "skills": [
+      "React",
+      "Vite",
+      "ONNX Runtime Web",
+      "Web Workers",
+      "JavaScript",
+      "CSS",
+      "GitHub Actions",
+      "GitHub Pages"
+    ],
+    "image": "/assets/AutoColouringPage.png",
+    "links": [
+      {
+        "label": "View Live",
+        "url": "https://autocolouring.app/"
+      },
+      {
+        "label": "View on GitHub",
+        "url": "https://github.com/KanyeS/AutoColouringPage"
+      }
+    ]
+  },
+  {
+    "id": 3,
     "title": "Below the Couches",
     "description": "A 2D puzzle game built in Unity using C#. It's a challenging puzzle game that involves creative problem-solving and fun mechanics.",
     "skills": [
@@ -24,7 +81,7 @@
     ]
   },
   {
-    "id": 2,
+    "id": 3,
     "title": "Lyrical Project",
     "description": "A full-stack web application that uses AI to generate piano roll music, built with SQL, Node, Flask, React, and Tone.js.",
     "skills": ["SQL", "Node", "Flask", "React", "Tone.js", "AI"],
